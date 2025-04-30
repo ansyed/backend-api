@@ -1,0 +1,9 @@
+Django
+django-cors-headers
+dj-database-url
+django-ninja
+django-ninja-jwt[crypto]
+pydantic[email]
+psycopg[binary] # psycopg
+python-decouple
+rav

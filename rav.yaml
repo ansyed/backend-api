@@ -1,0 +1,31 @@
+scripts:
+  server:
+    - cd src && python manage.py runserver 8001
+  makemigrations:
+    - cd src && python manage.py makemigrations
+  migrate:
+    - cd src && python manage.py migrate
+  shell:
+    - cd src && python manage.py shell
+  start_app:
+    - cd src && python manage.py startapp waitlists
+  curl_auth: |
+    curl -X POST -H "Content-Type: application/json" -d '{"username": "cfe", "password": "123"}' http://127.0.0.1:8001/api/token/pair
+  curl_protect: |
+    curl -X GET -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1OTk3ODA5LCJpYXQiOjE3NDU5OTQyMDksImp0aSI6IjJhZDAzMWRjMTM3MzQzYTRiZjU1ZDhlNzI2MzVlNjNjIiwidXNlcl9pZCI6MX0.4VgAOX11qdINCUkvndaiJp2dORVPBh3qlMf42Qo3hLw" http://127.0.0.1:8001/api/me
+  
+  # python -c "import secrets;print(secrets.token_urlsafe(54))"
+  # python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+
+#   cd src
+# # save code workspace
+# python3 -m venv venv
+# . venv/bin/activate
+# django-admin startproject cfehome .
+# cd ..
+# nvm use v22.13.0
+# npx create-next-app@latest
+
+# backend----
+# create api.py in dir "src"
+# python manage.py startapp waitlists
